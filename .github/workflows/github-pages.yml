@@ -1,0 +1,9 @@
+name: Deploy Fabular Content to Pages
+
+      - name: Upload Website Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+         
+          path: 'Fabular_Website'
+          
+      - name: Deploy to GitHub Pages
