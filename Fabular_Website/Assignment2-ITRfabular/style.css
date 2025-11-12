@@ -1,0 +1,123 @@
+html, body {
+            
+            height: 100%;          
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px; 
+            background-color: #708E86;
+            color: #374151;
+            display: flex;
+            justify-content: center;  
+            align-items: center;      
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: #C3C1BA;
+            padding: 60px;
+            border-radius: 60px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 100px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+   
+        #income, #taxResult {
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+            width: 100%;
+            box-sizing: border-box;
+            height: 40px;
+            line-height: 40px;         
+            padding-left: 10px;        
+            padding-top: 0;            
+            padding-bottom: 0;
+            background-color: #eee;    
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 15px; 
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        #income::placeholder {
+            color: #aaa;
+            font-style: italic;
+        }
+
+        #taxResult {
+            background-color: #dddddd;
+            color: #555555;
+            cursor: not-allowed;
+            padding-bottom: 10px;
+        }
+
+        #taxResult.active {
+            background-color: #fff;             
+            color: #333;                      
+            cursor: text;                     
+        }
+        
+        #taxResult[readonly] {
+            opacity: 0.8;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px; 
+            margin-bottom: 20px;
+        }
+
+        .button-group button {
+            width: 50%; 
+            padding: 10px;
+            background: #708E86;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 60px;
+            margin-bottom: 0; 
+        }
+
+        .button-group button:hover {
+            background: #B4A883;
+        }
+
+        .home-button {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1000; 
+            
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #C3C1BA;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        }
+        .home-button:hover {
+            background-color: #708E86; 
+        }

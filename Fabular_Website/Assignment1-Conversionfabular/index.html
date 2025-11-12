@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversion</title>
+   <link rel="icon" type="image/gif" href="kurimanju-kurimanjuu.gif">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Conversion (Celsius ↔ Fahrenheit, Meters ↔ Feet)</h1>
+    
+
+    <div class="form-group">
+      <label for="n1">Enter Value:</label>
+      <input id="n1" name="n1" type="number" placeholder="Enter number">
+    </div>
+
+    <div class="button-group">
+      <button onclick="cTof()">Celsius to Fahrenheit</button>
+      <button onclick="fToc()">Fahrenheit to Celsius</button>
+      <button onclick="mTof()">Meters to Feet</button>
+      <button onclick="fTom()">Feet to Meters</button>
+      <button onclick="clearvalues()">Clear Values</button>
+    </div>
+
+    <div class="form-group" style="margin‑top:30px;">
+      <label for="result">The resulting value is: </label>
+      <input id="result" name="result" type="text" readonly>
+    </div>
+  </div>
+
+ <a href="../index.html" class="home-button">
+        ← Back to Projects Home
+    </a>
+
+  <script src="index.js"></script>
+</body>
+</html>

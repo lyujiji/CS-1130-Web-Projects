@@ -1,0 +1,129 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans‑serif;
+  background-color: #708E86;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.container {
+  background: #C3C1BA;
+  padding: 40px 30px;
+  border-radius: 70px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 770px;
+  box-sizing: border-box;
+}
+
+
+.container h1 {
+  text-align: center;
+  color: #374151;
+  white-space: nowrap;      
+  text-align: center;       
+  font-size: 1.8em;          
+  margin-bottom: 20px;
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #374151;
+}
+
+
+.form-group input[type="number"],
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 70px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+
+.form-group input[type="number"]:focus,
+.form-group input[type="text"]:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;  
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+}
+
+.button-group button {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #708E86;
+  border: none;
+  border-radius: 70px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.button-group button:hover {
+  background-color: #B4A883;
+}
+
+.button-group button:active {
+  transform: translateY(1px);
+}
+
+
+#result {
+  background-color: #f0f0f0;
+  color: #020202;
+  cursor: not‑allowed;
+}
+
+#result.active {
+  background-color: #fff;
+  color: #000000;
+  cursor: default;
+}
+
+.home-button {
+           
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1000; 
+            
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #C3C1BA; 
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        }
+        .home-button:hover {
+            background-color: #708E86; 
+        } 

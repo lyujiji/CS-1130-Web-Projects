@@ -1,0 +1,205 @@
+ :root {
+            --primary-color: #708E86;
+            --accent-color: #10b981;
+            --background-color: #C3C1BA;
+            --card-background: #ffffff;
+            --text-color: #1f2937;
+            --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+            --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+            --sidebar-width-desktop: 280px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+    
+        .hero {
+            background: var(--primary-color);
+            color: white;
+            padding: 5rem 1rem 3rem 1rem;
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            position: relative;
+            z-index: 5;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        
+        #sidebar-toggle {
+            position: fixed;
+            top: 20px;
+            left: calc(var(--sidebar-width-desktop) + 20px); 
+            z-index: 100;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: var(--shadow-light);
+            transition: left 0.3s ease-in-out, background-color 0.3s ease;
+            font-size: 1.25rem;
+            display: none; 
+        }
+        #sidebar-toggle:hover {
+            background-color: #5d7770;
+        }
+
+        @media (min-width: 900px) {
+            #sidebar-toggle {
+                display: block; 
+            }
+            #sidebar-toggle.toggle-expanded {
+                left: 20px; 
+            }
+        }
+
+       
+        .main-content {
+            transition: margin-left 0.3s ease-in-out;
+            max-width: 100%; 
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+        }
+        
+   
+        .sidebar {
+            background-color: var(--card-background);
+            padding: 2rem;
+            box-shadow: var(--shadow-hover);
+            z-index: 10;
+        }
+
+        @media (min-width: 900px) {
+            .sidebar {
+              
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: var(--sidebar-width-desktop);
+                height: 100vh;
+                border-radius: 0;
+                overflow-y: auto;
+                transition: left 0.3s ease-in-out;
+            }
+
+            
+            .sidebar.sidebar-hidden {
+                left: calc(-1 * var(--sidebar-width-desktop));
+            }
+
+          
+            .main-content {
+                margin-left: var(--sidebar-width-desktop);
+            }
+            
+            
+            .main-content.main-content-expanded {
+                margin-left: 0;
+            }
+        }
+
+        
+        .wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 1rem 3rem 1rem;
+            
+            flex-grow: 1;
+        }
+        
+    
+        .profile-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 0.75rem;
+            border: 4px solid var(--primary-color);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header .name { font-size: 1.6rem; font-weight: 700; color: var(--text-color); line-height: 1.2; }
+        .profile-header .role { font-size: 1.05rem; color: #6b7280; margin-top: 0.25rem; }
+        .info-block { margin-bottom: 2.5rem; }
+        .info-block h3 { color: var(--accent-color); margin-bottom: 0.75rem; font-size: 1.15rem; font-weight: 600; }
+        .info-block p { margin-bottom: 0.5rem; font-size: 0.95rem; }
+        .info-block i { margin-right: 0.5rem; color: var(--primary-color); width: 18px; text-align: center; }
+        .info-block.skills ul { list-style: none; padding: 0; }
+        .info-block.skills img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: var(--shadow-light);
+            display: block;
+           
+            margin: 1rem auto 0; 
+        }
+
+   
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            justify-content: start; 
+        }
+
+       
+        .project-card {
+            background-color: var(--card-background);
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: left;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary-color);
+        }
+
+        .project-card h2 { color: var(--primary-color); font-size: 1.25rem; margin-bottom: 0.5rem; }
+        .project-card p { font-size: 0.95rem; color: #4b5563; }
+        .project-card.placeholder { border: 2px dashed #9ca3af; background-color: #ffffff; opacity: 0.7; cursor: default; }
+        .project-card.placeholder h2 { color: #9ca3af; }
+
+
+        .footer {
+            background-color: #374151;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            position: relative;
+        }
